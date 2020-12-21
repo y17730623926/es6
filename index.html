@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="./src/map_set_lx.js"></script>
+    <!-- <input type="text" id="oInput"> -->
+    <!-- <p><i>你输入的值为：<font id="txt" color="red"></font></i></p> -->
+    <!-- <script src="./polyfill.js"></script> -->
+    <!-- <script src="" type="module"></script> -->         
+    <!-- <script src="./src/chapter4-6.js" charset="utf-8"></script> -->
+    <script src="./src/speard.js"></script>
+    <!-- <script src="./src/map_set_lx.js"></script> -->
+    
+    <button onclick="alert((function(){'use strict'; return this})());">
+        内联事件处理1
+    </button>
+    <!-- 警告窗口中的字符为undefined -->
+    <button onclick="'use strict'; alert(this.tagName.toLowerCase());">
+        内联事件处理2
+    </button>
+    <!-- 警告窗口中的字符为button -->
 </body>
+
 </html>

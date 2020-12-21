@@ -1,3 +1,4 @@
+// Set里面的方法
 {
 	let set = new Set();
 	set.add(1);
@@ -39,4 +40,15 @@
 	let wset = new WeakSet();
 	wset.add(obj);
 	console.log(wset);
+}
+{	
+	//Set 的应用
+	let s1 = new Set([1, 2, 3])
+	let s2 = new Set([2, 3, 4])
+
+	new Set([...s1, ...s2])                      // 并集：[1,2,3,4]
+	let a = new Set([...s1].filter(item => s2.has(item))); // 交集：[2,3]
+	console.log(a)
+	let b = new Set([...s1].filter(item => !s2.has(item)));// 差集：[1,4]
+	console.log(b)
 }

@@ -1,13 +1,11 @@
 {
     //Map实例转化为对象
-    let map = new Map([["name","yk"],["age",19],["sex","男"]]);
-    let obj = {};
-    for (const en of map.entries()) {
-        console.log(en);
-        obj[en[0]] = en[1];
-    }
+    let obj = {"name":"yk","age":19,"sex":"男"};
+    let map = new Map(Object.entries(obj));
+    let obj1 = Object.fromEntries(map);
     console.log(map);
     console.log(obj);
+    console.log(obj1);
 
     //Set实例转化为数组
     let set = new Set([1,2,3,5,5,4,6,1,2,8,9,4,4,]);
